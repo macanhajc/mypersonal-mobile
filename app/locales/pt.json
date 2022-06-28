@@ -1,0 +1,8 @@
+{
+  "locale": "pt",
+  "localeName": "Portuguese",
+  "serverErrors": {
+    "credentialsError": "Credenciais inválidas"
+  },
+  "form": {}
+}

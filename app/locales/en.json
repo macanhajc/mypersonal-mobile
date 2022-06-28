@@ -1,0 +1,8 @@
+{
+  "locale": "en",
+  "localeName": "English",
+  "serverErrors": {
+    "credentialsError": "Invalid credentials"
+  },
+  "form": {}
+}
