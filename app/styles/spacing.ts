@@ -14,25 +14,17 @@ export type SpacingTypes = {
   /**
    * 16px
    */
-  default: string;
+  md: string;
   /**
    * 24px
    */
-  xmd: string;
+  lg: string;
   /**
    * 32px
    */
-  md: string;
-  /**
-   * 48px
-   */
-  lg: string;
-  /**
-   * 64px
-   */
   xlg: string;
   /**
-   * 72px
+   * 48px
    */
   xl: string;
 };
@@ -41,10 +33,8 @@ export const spacing: SpacingTypes = {
   none: '0px',
   xs: '4px',
   sm: '8px',
-  default: '16px',
-  xmd: '24px',
-  md: '32px',
-  lg: '48px',
-  xlg: '64px',
-  xl: '72px',
+  md: '16px',
+  lg: '24px',
+  xlg: '32px',
+  xl: '48px',
 };

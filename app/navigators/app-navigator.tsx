@@ -7,15 +7,15 @@ import {
   NavigationContainerRef,
 } from '@react-navigation/native';
 
-import {MainScreen} from '../screens';
 import React from 'react';
+import {WelcomeScreen} from '../screens';
 
 export enum AppRoutes {
-  Main = 'main',
+  Welcome = 'welcome',
 }
 
 export type AppNavigatorParamList = {
-  [AppRoutes.Main]: undefined;
+  [AppRoutes.Welcome]: undefined;
 };
 
 export type AppNavigationProp<
@@ -28,8 +28,8 @@ const AppStack: React.FC = () => {
   return (
     <Stack.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName={AppRoutes.Main}>
-      <Stack.Screen name={AppRoutes.Main} component={MainScreen} />
+      initialRouteName={AppRoutes.Welcome}>
+      <Stack.Screen name={AppRoutes.Welcome} component={WelcomeScreen} />
     </Stack.Navigator>
   );
 };

@@ -1,3 +1,4 @@
+import {borders} from './borders';
 import {colors} from './colors';
 import {device} from './device';
 import {spacing} from './spacing';
@@ -9,6 +10,7 @@ export const theme = {
   spacing,
   typography,
   device,
+  borders,
 };
 
 export type AppTheme = typeof theme;
