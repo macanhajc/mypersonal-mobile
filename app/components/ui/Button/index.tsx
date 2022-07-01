@@ -1,6 +1,6 @@
+import {ColorsTypes, colors} from '../../../styles/colors';
 import React, {forwardRef} from 'react';
 
-import {ColorsTypes} from '../../../styles/colors';
 import {PressableProps} from 'react-native';
 import {Text} from '../Text';
 import styled from 'styled-components/native';
@@ -25,7 +25,8 @@ const StyledPressable = styled.Pressable`
   height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: ${({theme}) => theme.colors.primary};
+  background-color: ${({theme, disabled}) =>
+    theme.colors[disabled ? 'disabled' : 'primary']};
   padding-horizontal: ${({theme}) => theme.spacing.md};
   color: #ffffff;
 `;
@@ -47,8 +48,8 @@ export const Button = forwardRef<ButtonPropsRef, ButtonProps>(
           ref={ref}
           {...props}
           disabled={disabled}
-          android_ripple={{color: '#FFFFFF'}}>
-          <Text weight="SemiBold" style={{color: '#FFFFFF'}}>
+          android_ripple={{color: colors.white}}>
+          <Text weight="SemiBold" style={{color: colors.white}}>
             {text}
           </Text>
         </StyledPressable>
