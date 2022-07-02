@@ -8,8 +8,8 @@ import {
   useBackButtonHandler,
   useNavigationPersistence,
 } from './navigators';
-import {LogBox, StatusBar, View} from 'react-native';
-import React, {useEffect, useRef} from 'react';
+import {LogBox, StatusBar} from 'react-native';
+import React, {useRef} from 'react';
 import {
   SafeAreaProvider,
   initialWindowMetrics,
@@ -41,7 +41,6 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <View />
       <SafeAreaProvider initialMetrics={initialWindowMetrics}>
         <StatusBar translucent backgroundColor="transparent" />
         <LocaleProvider>

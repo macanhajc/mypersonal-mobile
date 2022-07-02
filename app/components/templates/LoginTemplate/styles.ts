@@ -3,6 +3,7 @@ import styled from 'styled-components/native';
 export const LoginTemplateWrapper = styled.View`
   flex: 1;
   justify-content: flex-end;
+  padding-bottom: ${({theme}) => theme.spacing.lg};
 `;
 
 export const TitleWrapper = styled.View`

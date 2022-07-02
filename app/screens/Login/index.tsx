@@ -6,7 +6,7 @@ import React from 'react';
 type LoginScreenProps = AppNavigationProp<AppRoutes.Login>;
 
 export const LoginScreen: React.FC<LoginScreenProps> = ({
-  navigation: {goBack},
+  navigation: {navigate},
 }) => {
-  return <LoginTemplate goBack={goBack} />;
+  return <LoginTemplate goBack={() => navigate(AppRoutes.Welcome)} />;
 };

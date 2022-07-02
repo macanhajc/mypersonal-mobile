@@ -2,6 +2,7 @@ import {AppLayoutWrapper, HeaderTitle, LayoutHeader} from './styles';
 
 import {ArrowLeftIcon} from '../../ui/Icons';
 import React from 'react';
+import {StyleSheet} from 'react-native';
 import {Text} from '../../ui';
 
 type AppLayoutProps = {
@@ -12,7 +13,7 @@ type AppLayoutProps = {
 
 const AppLayout: React.FC<AppLayoutProps> = ({children, goBack, title}) => {
   return (
-    <AppLayoutWrapper>
+    <AppLayoutWrapper contentContainerStyle={style.containerStyle}>
       {(goBack || title) && (
         <LayoutHeader>
           {goBack && <ArrowLeftIcon onPress={goBack} />}
@@ -30,5 +31,12 @@ const AppLayout: React.FC<AppLayoutProps> = ({children, goBack, title}) => {
     </AppLayoutWrapper>
   );
 };
+
+const style = StyleSheet.create({
+  containerStyle: {
+    flexGrow: 1,
+    padding: 24,
+  },
+});
 
 export default AppLayout;
