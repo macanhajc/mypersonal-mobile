@@ -9,7 +9,7 @@ import {
   useNavigationPersistence,
 } from './navigators';
 import {LogBox, StatusBar, View} from 'react-native';
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
   SafeAreaProvider,
   initialWindowMetrics,

@@ -58,6 +58,7 @@ export const Text = styled.Text<{
 }>`
   font-family: ${props => 'Poppins-' + (props.weight || 'Regular')};
   text-align: ${props => props.align || 'left'};
+  color: ${({theme, color}) => theme.colors[color || 'black']};
   ${({variant}) => {
     const attr = variants[variant || 'textMedium'];
     return css`

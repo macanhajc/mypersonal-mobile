@@ -1,5 +1,6 @@
+import {LoginScreen, WelcomeScreen} from '../screens';
 import {
-  NativeStackNavigationProp,
+  NativeStackScreenProps,
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
 import {
@@ -8,19 +9,22 @@ import {
 } from '@react-navigation/native';
 
 import React from 'react';
-import {WelcomeScreen} from '../screens';
 
 export enum AppRoutes {
   Welcome = 'welcome',
+  Login = 'login',
+  Register = 'register',
 }
 
 export type AppNavigatorParamList = {
   [AppRoutes.Welcome]: undefined;
+  [AppRoutes.Login]: undefined;
+  [AppRoutes.Register]: undefined;
 };
 
 export type AppNavigationProp<
   RouteName extends keyof AppNavigatorParamList = AppRoutes,
-> = NativeStackNavigationProp<AppNavigatorParamList, RouteName>;
+> = NativeStackScreenProps<AppNavigatorParamList, RouteName>;
 
 const Stack = createNativeStackNavigator<AppNavigatorParamList>();
 
@@ -30,6 +34,8 @@ const AppStack: React.FC = () => {
       screenOptions={{headerShown: false}}
       initialRouteName={AppRoutes.Welcome}>
       <Stack.Screen name={AppRoutes.Welcome} component={WelcomeScreen} />
+      <Stack.Screen name={AppRoutes.Login} component={LoginScreen} />
+      <Stack.Screen name={AppRoutes.Register} component={LoginScreen} />
     </Stack.Navigator>
   );
 };
