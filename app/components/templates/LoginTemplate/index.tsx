@@ -1,6 +1,6 @@
-import {Button, Divider, Space, Text, TextInput} from '../../ui';
+import {AtSymbolIconSolid, LockClosedIconSolid} from '../../ui/Icons';
+import {Button, Space, Text, TextInput} from '../../ui';
 import {ForgotPassword, LoginTemplateWrapper, TitleWrapper} from './styles';
-import {LockClosedIconSolid, UserIconSolid} from '../../ui/Icons';
 
 import AppLayout from '../../layouts/AppLayout';
 import React from 'react';
@@ -19,7 +19,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({goBack}) => {
           </Text>
         </TitleWrapper>
         <Space align="flex-end" gap="lg">
-          <TextInput placeholder="Login" prefix={<UserIconSolid />} />
+          <TextInput placeholder="Email" prefix={<AtSymbolIconSolid />} />
           <TextInput placeholder="Password" prefix={<LockClosedIconSolid />} />
           <ForgotPassword>
             <Text weight="Medium" color="primary">
@@ -27,7 +27,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({goBack}) => {
             </Text>
           </ForgotPassword>
           <Button text="Login" />
-          <Divider text="OR" />
         </Space>
       </LoginTemplateWrapper>
     </AppLayout>

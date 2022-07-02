@@ -1,4 +1,4 @@
-import {LoginScreen, WelcomeScreen} from '../screens';
+import {LoginScreen, RegisterScreen, WelcomeScreen} from '../screens';
 import {
   NativeStackScreenProps,
   createNativeStackNavigator,
@@ -35,7 +35,7 @@ const AppStack: React.FC = () => {
       initialRouteName={AppRoutes.Welcome}>
       <Stack.Screen name={AppRoutes.Welcome} component={WelcomeScreen} />
       <Stack.Screen name={AppRoutes.Login} component={LoginScreen} />
-      <Stack.Screen name={AppRoutes.Register} component={LoginScreen} />
+      <Stack.Screen name={AppRoutes.Register} component={RegisterScreen} />
     </Stack.Navigator>
   );
 };

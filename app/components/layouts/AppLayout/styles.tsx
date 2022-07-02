@@ -1,9 +1,6 @@
 import styled from 'styled-components/native';
 
-export const AppLayoutWrapper = styled.View`
-  flex: 1;
-  padding: ${({theme}) => theme.spacing.lg};
-  padding-top: ${({theme}) => theme.spacing.xl};
+export const AppLayoutWrapper = styled.ScrollView`
   background-color: ${({theme}) => theme.colors['base-100']};
 `;
 
