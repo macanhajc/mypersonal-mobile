@@ -1,3 +1,4 @@
+import {AppNavigationProp, HomeNavigationProp} from '.';
 import {
   NavigationContainerRef,
   NavigationState,
@@ -5,7 +6,6 @@ import {
 } from '@react-navigation/native';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {AppNavigationProp} from './app-navigator';
 import {BackHandler} from 'react-native';
 import {CompositeNavigationProp} from '@react-navigation/core';
 
@@ -21,7 +21,7 @@ export const AppNavigation = {
 };
 
 export type NavigationContainerComposite = NavigationContainerRef<
-  CompositeNavigationProp<AppNavigationProp, any>
+  CompositeNavigationProp<AppNavigationProp, HomeNavigationProp>
 >;
 
 export const setAppNavigation = (

@@ -1,9 +1,9 @@
-import {AppNavigationProp, AppRoutes} from '../../navigators';
+import {AppRoutes, AppScreenProp} from '../../navigators';
 
 import LoginTemplate from '../../components/templates/LoginTemplate';
 import React from 'react';
 
-type LoginScreenProps = AppNavigationProp<AppRoutes.Login>;
+type LoginScreenProps = AppScreenProp<AppRoutes.Login>;
 
 export const LoginScreen: React.FC<LoginScreenProps> = ({
   navigation: {navigate},

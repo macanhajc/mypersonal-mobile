@@ -1,9 +1,9 @@
-import {AppNavigationProp, AppRoutes} from '../../navigators';
+import {AppRoutes, AppScreenProp} from '../../navigators';
 
 import React from 'react';
 import WelcomeTemplate from '../../components/templates/WelcomeTemplate';
 
-type WelcomeScreenProps = AppNavigationProp<AppRoutes.Welcome>;
+type WelcomeScreenProps = AppScreenProp<AppRoutes.Welcome>;
 
 export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
   navigation: {navigate},
